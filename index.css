@@ -1,0 +1,47 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+    color: #171a28;
+    font-family: 'poppins', sans-serif;
+}
+.desktop { 
+    display: none;
+}
+@media (min-width: 768px) {
+    .desktop{
+        display: initial;
+    }
+}
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 5px 28px;
+}
+a.logo {
+    height: 12px;
+    width: 100px;
+    color: inherit;
+}
+header a {
+    color: inherit;
+}
+header nav a {
+    text-decoration: none;
+    padding: 5px 12px;
+}
+header nav.center {
+    text-align: center;
+}
+header nav.right {
+    text-align: right;
+} 
+
+section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
