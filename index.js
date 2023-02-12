@@ -1,14 +1,19 @@
 const openMenu = () => {
-    document.querySelector( selectors: '.backdrop').classname = 'backdrop active';
-    document.querySelector( selectors: 'aside').classname = 'active';
+  document.querySelector('.backdrop').className = 'backdrop active';
+  document.querySelector('aside').className = 'active';
 }
-
 const closeMenu = () => {
-    document.querySelector(selectors: '.backdrop').classname = 'backdrop';
-    document.querySelector(selectors: 'aside').classname = 'backdrop';
+  document.querySelector('.backdrop').className = 'backdrop';
+  document.querySelector('aside').className = '';
 }
 
-document.getElementById( elementId: 'menuBtn').onclick = e => {
-    e.preventDefault();
-    openMenu();
+document.getElementById('menuBtn').onclick = e => {
+  e.preventDefault();
+  openMenu();
+}
+document.querySelector('aside button.close').onclick = e => {
+  closeMenu();
+}
+document.querySelector('.backdrop').onclick = e => {
+  closeMenu();
 }
